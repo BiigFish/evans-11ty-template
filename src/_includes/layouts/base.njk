@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <script defer src="/js/alpine.js?v={% version %}"></script>
+    <title>{{ title }}</title>
+    {% if description %}
+        <meta name="description" content="{{description}}" />
+    {% endif %}
+</head>
+<body>
+    <h1 class="primaryColor">{{ title }}</h1>
+    <span class="primaryColor" x-data="{message:'this is a script test'}" x-text="message"></span>
+    {{ content | safe }}
+</body>
+</html>

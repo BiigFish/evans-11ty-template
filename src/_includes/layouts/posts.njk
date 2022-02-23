@@ -2,6 +2,8 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="text-blue-600">this a home test cool</h1>
 {% include 'components/header.njk' %}
-{{ content| safe }}
+
+<div class="mt-6 md:mt-12">
+    {{ content | safe }}
+</div>
